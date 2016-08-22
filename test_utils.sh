@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # . utils
-
 source utils
+
 
 # COLORS,HEADERS,LOGGIN
 e_header "I am a sample script"
@@ -12,7 +12,6 @@ e_warning "I am a warning message"
 e_underline "I am underlined text"
 e_bold "I am bold text"
 e_note "I am a note"
-
 
 
 # Seeking User Confirmation
@@ -26,13 +25,14 @@ else
 fi
 
 
+# Sending Notifications to Pushover
+pushover "We just finished performing a lengthy task."
+
 
 # Testing for scripts, packages, OSes
 e_header "I am a sample script"
 
-
-
-# Check for Git
+## Check for Git
 if type_exists 'git'; then
   e_success "Git good to go"
 else
@@ -46,12 +46,6 @@ else
   e_error "You are not on a mac"
   exit 1
 fi
-
-
-
-# Sending Notifications to Pushover
-pushover "We just finished performing a lengthy task."
-
 
 
 # Comparing a list
@@ -72,4 +66,5 @@ for item in ${list[@]}
 else
 e_arrow "Nothing to install.  You've already got them all."
 fi
+
 
