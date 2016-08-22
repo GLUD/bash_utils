@@ -130,7 +130,7 @@ pushover () {
 # Credit: https://github.com/cowboy/dotfiles
 #
 
-function to_install() {
+#function to_install() {
 #  local debug desired installed i desired_s installed_s remain
 #  if [[ "$1" == 1 ]]; then debug=1; shift; fi
 #    # Convert args to arrays, handling both space- and newline-separated lists.
@@ -151,4 +151,4 @@ function to_install() {
 #    echo "$v ($(eval echo "\${#$v[*]}")) $(eval echo "\${$v[*]}")"
 #  done
 #  echo "${remain[@]}"
-}
+#}
